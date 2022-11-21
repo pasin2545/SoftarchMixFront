@@ -182,10 +182,10 @@ class NavigateDrawer extends StatelessWidget {
           ),
           onTap: () {
             //action on press
-            Navigator.pop(context);
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
+            Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) {
               return HomeScreen();
-            }));
+            }), (route) => false);
+            
           },
         ),
       ],
@@ -426,10 +426,10 @@ class AdminNavigateDrawer extends StatelessWidget {
           ),
           onTap: () {
             //action on press
-            Navigator.pop(context);
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
+            Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) {
               return HomeScreen();
-            }));
+            }), (route) => false);
+            
           },
         ),
       ],
